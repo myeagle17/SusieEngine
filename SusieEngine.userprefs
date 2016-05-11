@@ -1,0 +1,22 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/App.cs">
+    <Files>
+      <File FileName="Assets/engine/Engine.cs" Line="1" Column="1" />
+      <File FileName="Assets/engine/EngineMsgDef.cs" Line="1" Column="1" />
+      <File FileName="Assets/engine/eventDef/DataEventArgs.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/AppNetManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/App.cs" Line="9" Column="18" />
+      <File FileName="Assets/engine/json/SSTileMap.cs" Line="1" Column="1" />
+      <File FileName="Assets/engine/json/SSTileMapInfo.cs" Line="1" Column="1" />
+      <File FileName="Assets/engine/json/SSTileMapParser.cs" Line="84" Column="37" />
+      <File FileName="Assets/engine/json/SSJsonTool.cs" Line="34" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/TerryLu/Documents/project/Susie/SusieEngine/SusieEngine/Assets/script/App.cs" line="9" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
