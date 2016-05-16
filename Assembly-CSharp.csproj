@@ -52,6 +52,8 @@
      <Compile Include="Assets\engine\json\SSTileMap.cs" />
      <Compile Include="Assets\engine\json\SSTileMapInfo.cs" />
      <Compile Include="Assets\engine\json\SSTileMapParser.cs" />
+     <Compile Include="Assets\engine\json\SSTileMapTileInfo.cs" />
+     <Compile Include="Assets\engine\json\SSTileMapTileSetInfo.cs" />
      <Compile Include="Assets\engine\message\Message.cs" />
      <Compile Include="Assets\engine\message\MessageManager.cs" />
      <Compile Include="Assets\engine\net\SSSocket.cs" />

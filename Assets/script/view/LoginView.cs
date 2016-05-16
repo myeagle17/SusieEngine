@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using LitJson;
 using Susie;
 using AppProto;
 using System;
@@ -17,13 +17,23 @@ public class LoginView : MonoBehaviour {
 	}
 	
 	public void onBtnLogin(){
-		AppNetManager netManager = AppNetManager.getInceStance();
-		bool isConnected = netManager.Connect();
-		if(isConnected){
-			SSDebug.Log("sendAuth");
-			SendAuth();
-		}
-					
+		// AppNetManager netManager = AppNetManager.getInceStance();
+		// bool isConnected = netManager.Connect();
+		// if(isConnected){
+		// 	SSDebug.Log("sendAuth");
+		// 	SendAuth();
+		// }
+		
+		testTileMap();	
+	}
+	
+	public void testTileMap(){
+		string src = Application.streamingAssetsPath + "/desert.json";
+		SSDebug.Log("src = " + src);
+		SSTileMap map = new SSTileMap(src);
+		JsonData data = map.Info.getPropertyByTileID(12);
+		string type = SSJsonTool.getStringValue_json (data , "type");
+		int a = 3;
 	}
 	
 	private void SendAuth(){

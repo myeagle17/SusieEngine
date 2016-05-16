@@ -28,43 +28,21 @@ namespace Susie
 		public string globalDir;
 		public Property property;
 
-		public List<SSTileMapTileSetInfo> tileSetInfoList;
-		public List<SSTileMapTileSetInfo> layersInfo;
+		public SSTileMapTileSetInfo tileSetInfo;
+		
+		public List<SSTileMapLayerBasicInfo> layerInfoList;
 		public Vector2 mapSize;
 
-		public SSTileMapInfo ()
-		{
-			tileSetInfoList = new List<SSTileMapTileSetInfo>();
+		public SSTileMapInfo(){
+			tileSetInfo = new SSTileMapTileSetInfo();
+			layerInfoList = new List<SSTileMapLayerBasicInfo>();
+		}
+		
+		public Property getPropertyByTileID(int id){
+			return tileSetInfo.getPropertyByTileID(id);
 		}
 	}
 
-	
-	public class SSTileMapTileSetInfo
-	{
-		public int firstgid;
-		public int margin;
-		public int spacing;
-		public int tileWidth;
-		public int tileHeight;
-		public string name;
-		public Property property;
-		public Dictionary<int , SSTileMapTileInfo> tileDic;
-
-		public SSTileMapTileSetInfo(){
-			tileDic = new Dictionary<int , SSTileMapTileInfo>();
-		}
-	};
-	
-	public class SSTileMapTileInfo
-	{
-		public string imgSrc;
-		public bool isTile;
-		public Property property;
-		
-		public SSTileMapTileInfo(){
-			isTile = false;
-		}
-	};
 
 	public class SSTileMapLayerBasicInfo
 	{
@@ -78,10 +56,25 @@ namespace Susie
 		public int x;
 		public int y;
 		public Property property;
+		
+		public virtual void Parse(JsonData layerInfoDoc){
+			
+		}
 	};
 	
 	public class SSTileMapLayerTileInfo:SSTileMapLayerBasicInfo{
 		public List<int> data;
+		
+		public override void Parse(JsonData layerInfoDoc){
+			base.Parse(layerInfoDoc);
+			data = new List<int>();
+			JsonData dataDoc = SSJsonTool.getSubDictionary_json(layerInfoDoc,SSTileMapParser.TILED_TAG_DATA);
+			if (null == dataDoc)return;
+			for (int i = 0; i < dataDoc.Count; i++)
+			{
+				data.Add(SSJsonTool.getIntValue_json(dataDoc , i));
+			}	
+		}
 	}
 }
 

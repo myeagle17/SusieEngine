@@ -13,6 +13,15 @@ namespace Susie
 				return -1;
 			}
 		}
+		
+		public static int getIntValue_json(JsonData doc , int tag){
+			JsonData data = getSubDictionary_json (doc, tag);
+			if((data!=null)&&data.IsInt){
+				return (int)data;
+			}else{
+				return -1;
+			}
+		}
 
 		public static string getStringValue_json(JsonData doc , string tag){
 			JsonData data = getSubDictionary_json (doc, tag);
@@ -28,7 +37,6 @@ namespace Susie
 			try {
 				data = doc[tag];
 			} catch (Exception ex) {
-				SSDebug.Log ("getSubDictionary_json error:" + ex);
 				return null;
 			}
 			return data; 
@@ -39,7 +47,6 @@ namespace Susie
 			try {
 				data = doc[tag];
 			} catch (Exception ex) {
-				SSDebug.Log ("getSubDictionary_json error:" + ex);
 				return null;
 			}
 			return data; 
