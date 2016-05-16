@@ -1,6 +1,6 @@
 ﻿using System;
-
 namespace Susie
+
 {
 	public class DataEventArgs:EventArgs
 	{

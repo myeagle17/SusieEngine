@@ -16,3 +16,4 @@
 /Users/TerryLu/Documents/project/Susie/SusieEngine/SusieEngine/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/TerryLu/Documents/project/Susie/SusieEngine/SusieEngine/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/TerryLu/Documents/project/Susie/SusieEngine/SusieEngine/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/TerryLu/Documents/project/Susie/SusieEngine/SusieEngine/Temp/bin/Debug/protobuf-net.dll

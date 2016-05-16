@@ -21,7 +21,13 @@ namespace Susie{
 		private MemoryStream sendMsg;
 		private SocketBaseCondition condition;
 		private Socket socket;
-
+		
+		public MemoryStream ReceiveMsg{
+			get{
+				return receiveMsg;
+			}
+		}
+		
 		public SocketBaseCondition Condition {
 			get {
 				return condition;
@@ -73,11 +79,12 @@ namespace Susie{
 			}  
 			else  
 			{  
+				socket.ReceiveTimeout = 10;
 				//与socket建立连接成功，开启线程接受服务端数据。  
 				Condition = SocketBaseCondition.Connected;
 				Thread thread = new Thread(new ThreadStart(Run));  
 				thread.IsBackground = true;  
-				thread.Start();  
+				thread.Start(); 
 			}  
 		}
 
@@ -110,8 +117,8 @@ namespace Susie{
 
 		public byte[] Receve(){	
 			lock (sendMsg) {
-				byte[] result = sendMsg.ToArray ();
-				sendMsg = new MemoryStream ();
+				byte[] result = receiveMsg.ToArray ();
+				receiveMsg = new MemoryStream ();
 				return result;
 			}
 		}
@@ -122,20 +129,22 @@ namespace Susie{
 					Close ();
 					break;
 				}
-
 				// send
 				lock (sendMsg) {
 					if (sendMsg.Length > 0) {
+						Debug("send:"+sendMsg.ToString());
 						SendToServer (sendMsg.ToArray());
 						sendMsg = new MemoryStream ();
 					}
 				}
-				// receive
+				
 				ReceiveFromServer();
 			}
 		}
+		
 
 		private void SendToServer (byte[] msg){
+			Debug("sendToServer");
 			if (!IsConnected ()) {
 				Debug ("Send error:socket is unconnected");
 				return;
@@ -158,7 +167,7 @@ namespace Susie{
 				Debug ("Receive error:socket is unconnected");
 				return;
 			}
-
+			if(socket.Available<=0) return;
 			try  
 			{  
 				//接受数据保存至bytes当中  
@@ -166,22 +175,20 @@ namespace Susie{
 				//Receive方法中会一直等待服务端回发消息  
 				//如果没有回发会一直在这里等着。
 				int i = socket.Receive(bytes);  
-				if (i <= 0)  
-				{  
-					Close();
-				}else{
+				if (i > 0) {
 					lock(receiveMsg){
 						receiveMsg.Write(bytes , 0 , i);
 					}
+					SSDebug.Log("receiveFromServer:"+i);
+					SSDebug.printBytes(receiveMsg.ToArray());
 				}
 			}  
 			catch (Exception e)  
 			{  
 				Debug("Failed to clientSocket error." + e);  
-				Close ();
 			}  
 		}
-
+		
 
 		private void Debug(string s){
 			SSDebug.Log(s);
