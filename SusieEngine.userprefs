@@ -1,26 +1,49 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/net/AppNetManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/view/LoginView.cs">
     <Files>
       <File FileName="Assets/engine/Engine.cs" Line="1" Column="1" />
       <File FileName="Assets/engine/EngineMsgDef.cs" Line="1" Column="1" />
       <File FileName="Assets/engine/eventDef/DataEventArgs.cs" Line="1" Column="1" />
       <File FileName="Assets/script/App.cs" Line="1" Column="1" />
       <File FileName="Assets/engine/json/SSTileMap.cs" Line="1" Column="1" />
-      <File FileName="Assets/engine/json/SSTileMapInfo.cs" Line="1" Column="1" />
-      <File FileName="Assets/engine/json/SSTileMapParser.cs" Line="1" Column="1" />
+      <File FileName="Assets/engine/json/SSTileMapInfo.cs" Line="42" Column="1" />
+      <File FileName="Assets/engine/json/SSTileMapParser.cs" Line="95" Column="1" />
       <File FileName="Assets/engine/json/SSJsonTool.cs" Line="1" Column="1" />
       <File FileName="Assets/proto/MceAuth.cs" Line="1" Column="1" />
-      <File FileName="Assets/engine/net/SSSocket.cs" Line="60" Column="1" />
-      <File FileName="Assets/engine/net/SocketBase.cs" Line="133" Column="1" />
-      <File FileName="Assets/script/view/LoginView.cs" Line="1" Column="1" />
-      <File FileName="Assets/script/net/AppNetManager.cs" Line="88" Column="37" />
+      <File FileName="Assets/engine/net/SSSocket.cs" Line="64" Column="13" />
+      <File FileName="Assets/engine/net/SocketBase.cs" Line="169" Column="5" />
+      <File FileName="Assets/script/view/LoginView.cs" Line="36" Column="1" />
+      <File FileName="Assets/script/net/AppNetManager.cs" Line="12" Column="25" />
       <File FileName="Assets/script/net/NetMsgDef.cs" Line="1" Column="1" />
       <File FileName="Assets/script/net/NetMsgProtoConfig.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/data/UserDataManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/data/ADataManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/AppDebug.cs" Line="5" Column="34" />
+      <File FileName="Assets/engine/json/SSTileMapTileInfo.cs" Line="17" Column="2" />
+      <File FileName="Assets/engine/json/SSTileMapTileSetInfo.cs" Line="33" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>map</Value>
+          <Value>map.info</Value>
+          <Value>magicNum</Value>
+          <Value>receiveMemoryStream.Position</Value>
+          <Value>map.info.layerInfoList</Value>
+          <Value>map.info.layerInfoList[0]</Value>
+          <Value>map.info.layerInfoList[1]</Value>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/TerryLu/Documents/project/Susie/SusieEngine/SusieEngine/Assets/script/net/AppNetManager.cs" line="110" column="1" />
+      <Breakpoint file="/Users/TerryLu/Documents/project/Susie/SusieEngine/SusieEngine/Assets/script/net/AppNetManager.cs" line="172" column="1" />
+      <Breakpoint file="/Users/TerryLu/Documents/project/Susie/SusieEngine/SusieEngine/Assets/script/net/AppNetManager.cs" line="164" column="1" />
+      <Breakpoint file="/Users/TerryLu/Documents/project/Susie/SusieEngine/SusieEngine/Assets/script/net/AppNetManager.cs" line="80" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
