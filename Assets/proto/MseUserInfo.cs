@@ -7,7 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from: src/MseUserInfo.proto
+// Generated from: proto/MseUserInfo.proto
+// Note: requires additional types generated from: MseSyncVitality.proto
 namespace AppProto
 {
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MseUserInfo")]
@@ -55,13 +56,13 @@ namespace AppProto
       get { return _level; }
       set { _level = value; }
     }
-    private int _head = default(int);
-    [global::ProtoBuf.ProtoMember(6, IsRequired = false, Name=@"head", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int head
+    private string _shead = "";
+    [global::ProtoBuf.ProtoMember(6, IsRequired = false, Name=@"shead", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::System.ComponentModel.DefaultValue("")]
+    public string shead
     {
-      get { return _head; }
-      set { _head = value; }
+      get { return _shead; }
+      set { _shead = value; }
     }
     private int _vipLevel = default(int);
     [global::ProtoBuf.ProtoMember(7, IsRequired = false, Name=@"vipLevel", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
@@ -126,6 +127,108 @@ namespace AppProto
     {
       get { return _camp; }
       set { _camp = value; }
+    }
+    private int _rank_id = default(int);
+    [global::ProtoBuf.ProtoMember(15, IsRequired = false, Name=@"rank_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(int))]
+    public int rank_id
+    {
+      get { return _rank_id; }
+      set { _rank_id = value; }
+    }
+    private readonly global::System.Collections.Generic.List<bool> _mask_list = new global::System.Collections.Generic.List<bool>();
+    [global::ProtoBuf.ProtoMember(16, Name=@"mask_list", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public global::System.Collections.Generic.List<bool> mask_list
+    {
+      get { return _mask_list; }
+    }
+  
+    private bool _is_get = default(bool);
+    [global::ProtoBuf.ProtoMember(17, IsRequired = false, Name=@"is_get", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::System.ComponentModel.DefaultValue(default(bool))]
+    public bool is_get
+    {
+      get { return _is_get; }
+      set { _is_get = value; }
+    }
+    private int _today_get_exploit = default(int);
+    [global::ProtoBuf.ProtoMember(18, IsRequired = false, Name=@"today_get_exploit", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(int))]
+    public int today_get_exploit
+    {
+      get { return _today_get_exploit; }
+      set { _today_get_exploit = value; }
+    }
+    private int _nCamp = (int)-1;
+    [global::ProtoBuf.ProtoMember(19, IsRequired = false, Name=@"nCamp", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue((int)-1)]
+    public int nCamp
+    {
+      get { return _nCamp; }
+      set { _nCamp = value; }
+    }
+    private bool _is_level_up = (bool)false;
+    [global::ProtoBuf.ProtoMember(20, IsRequired = false, Name=@"is_level_up", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::System.ComponentModel.DefaultValue((bool)false)]
+    public bool is_level_up
+    {
+      get { return _is_level_up; }
+      set { _is_level_up = value; }
+    }
+    private string _short_id = "";
+    [global::ProtoBuf.ProtoMember(21, IsRequired = false, Name=@"short_id", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::System.ComponentModel.DefaultValue("")]
+    public string short_id
+    {
+      get { return _short_id; }
+      set { _short_id = value; }
+    }
+    private readonly global::System.Collections.Generic.List<int> _friend_camps = new global::System.Collections.Generic.List<int>();
+    [global::ProtoBuf.ProtoMember(22, Name=@"friend_camps", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public global::System.Collections.Generic.List<int> friend_camps
+    {
+      get { return _friend_camps; }
+    }
+  
+    private string _head_str = "";
+    [global::ProtoBuf.ProtoMember(23, IsRequired = false, Name=@"head_str", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::System.ComponentModel.DefaultValue("")]
+    public string head_str
+    {
+      get { return _head_str; }
+      set { _head_str = value; }
+    }
+    private MseSyncVitality _vitality = null;
+    [global::ProtoBuf.ProtoMember(24, IsRequired = false, Name=@"vitality", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::System.ComponentModel.DefaultValue(null)]
+    public MseSyncVitality vitality
+    {
+      get { return _vitality; }
+      set { _vitality = value; }
+    }
+    private long _history_get_exploit = default(long);
+    [global::ProtoBuf.ProtoMember(25, IsRequired = false, Name=@"history_get_exploit", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long history_get_exploit
+    {
+      get { return _history_get_exploit; }
+      set { _history_get_exploit = value; }
+    }
+    private int _vip_exp = default(int);
+    [global::ProtoBuf.ProtoMember(26, IsRequired = false, Name=@"vip_exp", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(int))]
+    public int vip_exp
+    {
+      get { return _vip_exp; }
+      set { _vip_exp = value; }
+    }
+    private string _sHat = "";
+    [global::ProtoBuf.ProtoMember(27, IsRequired = false, Name=@"sHat", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::System.ComponentModel.DefaultValue("")]
+    public string sHat
+    {
+      get { return _sHat; }
+      set { _sHat = value; }
     }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)

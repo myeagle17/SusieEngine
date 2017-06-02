@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from: src/MceEnterGame.proto
+// Generated from: proto/MceEnterGame.proto
 namespace AppProto
 {
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MceEnterGame")]

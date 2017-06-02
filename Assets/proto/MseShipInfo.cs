@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from: src/MseShipInfo.proto
+// Generated from: proto/MseShipInfo.proto
 namespace AppProto
 {
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MShipPart")]
@@ -78,242 +78,242 @@ namespace AppProto
       get { return _ship_part; }
     }
   
-    private int _hp_recover = default(int);
+    private long _hp_recover = default(long);
     [global::ProtoBuf.ProtoMember(5, IsRequired = false, Name=@"hp_recover", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int hp_recover
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long hp_recover
     {
       get { return _hp_recover; }
       set { _hp_recover = value; }
     }
-    private int _max_power = default(int);
+    private long _max_power = default(long);
     [global::ProtoBuf.ProtoMember(6, IsRequired = false, Name=@"max_power", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int max_power
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long max_power
     {
       get { return _max_power; }
       set { _max_power = value; }
     }
-    private int _load = default(int);
+    private long _load = default(long);
     [global::ProtoBuf.ProtoMember(7, IsRequired = false, Name=@"load", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int load
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long load
     {
       get { return _load; }
       set { _load = value; }
     }
-    private int _max_speed = default(int);
+    private long _max_speed = default(long);
     [global::ProtoBuf.ProtoMember(8, IsRequired = false, Name=@"max_speed", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int max_speed
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long max_speed
     {
       get { return _max_speed; }
       set { _max_speed = value; }
     }
-    private int _accelerated_speed = default(int);
+    private long _accelerated_speed = default(long);
     [global::ProtoBuf.ProtoMember(9, IsRequired = false, Name=@"accelerated_speed", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int accelerated_speed
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long accelerated_speed
     {
       get { return _accelerated_speed; }
       set { _accelerated_speed = value; }
     }
-    private int _turn_radius = default(int);
+    private long _turn_radius = default(long);
     [global::ProtoBuf.ProtoMember(10, IsRequired = false, Name=@"turn_radius", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int turn_radius
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long turn_radius
     {
       get { return _turn_radius; }
       set { _turn_radius = value; }
     }
-    private int _max_hp = default(int);
+    private long _max_hp = default(long);
     [global::ProtoBuf.ProtoMember(11, IsRequired = false, Name=@"max_hp", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int max_hp
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long max_hp
     {
       get { return _max_hp; }
       set { _max_hp = value; }
     }
-    private int _attack = default(int);
+    private long _attack = default(long);
     [global::ProtoBuf.ProtoMember(12, IsRequired = false, Name=@"attack", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int attack
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long attack
     {
       get { return _attack; }
       set { _attack = value; }
     }
-    private int _armor = default(int);
+    private long _armor = default(long);
     [global::ProtoBuf.ProtoMember(13, IsRequired = false, Name=@"armor", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int armor
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long armor
     {
       get { return _armor; }
       set { _armor = value; }
     }
-    private int _hit = default(int);
+    private long _hit = default(long);
     [global::ProtoBuf.ProtoMember(14, IsRequired = false, Name=@"hit", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int hit
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long hit
     {
       get { return _hit; }
       set { _hit = value; }
     }
-    private int _dodge = default(int);
+    private long _dodge = default(long);
     [global::ProtoBuf.ProtoMember(15, IsRequired = false, Name=@"dodge", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int dodge
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long dodge
     {
       get { return _dodge; }
       set { _dodge = value; }
     }
-    private int _critical = default(int);
+    private long _critical = default(long);
     [global::ProtoBuf.ProtoMember(16, IsRequired = false, Name=@"critical", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int critical
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long critical
     {
       get { return _critical; }
       set { _critical = value; }
     }
-    private int _critical_resistance = default(int);
+    private long _critical_resistance = default(long);
     [global::ProtoBuf.ProtoMember(17, IsRequired = false, Name=@"critical_resistance", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int critical_resistance
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long critical_resistance
     {
       get { return _critical_resistance; }
       set { _critical_resistance = value; }
     }
-    private int _damage_blast = default(int);
+    private long _damage_blast = default(long);
     [global::ProtoBuf.ProtoMember(18, IsRequired = false, Name=@"damage_blast", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int damage_blast
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long damage_blast
     {
       get { return _damage_blast; }
       set { _damage_blast = value; }
     }
-    private int _damage_kinetic = default(int);
+    private long _damage_kinetic = default(long);
     [global::ProtoBuf.ProtoMember(19, IsRequired = false, Name=@"damage_kinetic", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int damage_kinetic
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long damage_kinetic
     {
       get { return _damage_kinetic; }
       set { _damage_kinetic = value; }
     }
-    private int _damage_heat = default(int);
+    private long _damage_heat = default(long);
     [global::ProtoBuf.ProtoMember(20, IsRequired = false, Name=@"damage_heat", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int damage_heat
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long damage_heat
     {
       get { return _damage_heat; }
       set { _damage_heat = value; }
     }
-    private int _resistance_blast = default(int);
+    private long _resistance_blast = default(long);
     [global::ProtoBuf.ProtoMember(21, IsRequired = false, Name=@"resistance_blast", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int resistance_blast
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long resistance_blast
     {
       get { return _resistance_blast; }
       set { _resistance_blast = value; }
     }
-    private int _resistance_kinetic = default(int);
+    private long _resistance_kinetic = default(long);
     [global::ProtoBuf.ProtoMember(22, IsRequired = false, Name=@"resistance_kinetic", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int resistance_kinetic
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long resistance_kinetic
     {
       get { return _resistance_kinetic; }
       set { _resistance_kinetic = value; }
     }
-    private int _resistance_heat = default(int);
+    private long _resistance_heat = default(long);
     [global::ProtoBuf.ProtoMember(23, IsRequired = false, Name=@"resistance_heat", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int resistance_heat
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long resistance_heat
     {
       get { return _resistance_heat; }
       set { _resistance_heat = value; }
     }
-    private int _absolute_hp = default(int);
+    private long _absolute_hp = default(long);
     [global::ProtoBuf.ProtoMember(24, IsRequired = false, Name=@"absolute_hp", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int absolute_hp
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long absolute_hp
     {
       get { return _absolute_hp; }
       set { _absolute_hp = value; }
     }
-    private int _absolute_attack = default(int);
+    private long _absolute_attack = default(long);
     [global::ProtoBuf.ProtoMember(25, IsRequired = false, Name=@"absolute_attack", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int absolute_attack
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long absolute_attack
     {
       get { return _absolute_attack; }
       set { _absolute_attack = value; }
     }
-    private int _absolute_armor = default(int);
+    private long _absolute_armor = default(long);
     [global::ProtoBuf.ProtoMember(26, IsRequired = false, Name=@"absolute_armor", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int absolute_armor
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long absolute_armor
     {
       get { return _absolute_armor; }
       set { _absolute_armor = value; }
     }
-    private int _absolute_hit = default(int);
+    private long _absolute_hit = default(long);
     [global::ProtoBuf.ProtoMember(27, IsRequired = false, Name=@"absolute_hit", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int absolute_hit
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long absolute_hit
     {
       get { return _absolute_hit; }
       set { _absolute_hit = value; }
     }
-    private int _absolute_dodge = default(int);
+    private long _absolute_dodge = default(long);
     [global::ProtoBuf.ProtoMember(28, IsRequired = false, Name=@"absolute_dodge", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int absolute_dodge
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long absolute_dodge
     {
       get { return _absolute_dodge; }
       set { _absolute_dodge = value; }
     }
-    private int _absolute_critical = default(int);
+    private long _absolute_critical = default(long);
     [global::ProtoBuf.ProtoMember(29, IsRequired = false, Name=@"absolute_critical", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int absolute_critical
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long absolute_critical
     {
       get { return _absolute_critical; }
       set { _absolute_critical = value; }
     }
-    private int _absolute_critical_resistance = default(int);
+    private long _absolute_critical_resistance = default(long);
     [global::ProtoBuf.ProtoMember(30, IsRequired = false, Name=@"absolute_critical_resistance", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int absolute_critical_resistance
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long absolute_critical_resistance
     {
       get { return _absolute_critical_resistance; }
       set { _absolute_critical_resistance = value; }
     }
-    private int _critical_damage = default(int);
+    private long _critical_damage = default(long);
     [global::ProtoBuf.ProtoMember(31, IsRequired = false, Name=@"critical_damage", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int critical_damage
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long critical_damage
     {
       get { return _critical_damage; }
       set { _critical_damage = value; }
     }
-    private int _critical_reduce = default(int);
+    private long _critical_reduce = default(long);
     [global::ProtoBuf.ProtoMember(32, IsRequired = false, Name=@"critical_reduce", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int critical_reduce
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long critical_reduce
     {
       get { return _critical_reduce; }
       set { _critical_reduce = value; }
     }
-    private int _damage_amplify = default(int);
+    private long _damage_amplify = default(long);
     [global::ProtoBuf.ProtoMember(33, IsRequired = false, Name=@"damage_amplify", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int damage_amplify
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long damage_amplify
     {
       get { return _damage_amplify; }
       set { _damage_amplify = value; }
     }
-    private int _damage_reduce = default(int);
+    private long _damage_reduce = default(long);
     [global::ProtoBuf.ProtoMember(34, IsRequired = false, Name=@"damage_reduce", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int damage_reduce
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long damage_reduce
     {
       get { return _damage_reduce; }
       set { _damage_reduce = value; }
@@ -325,6 +325,14 @@ namespace AppProto
     {
       get { return _suitid; }
       set { _suitid = value; }
+    }
+    private long _fight_cap = default(long);
+    [global::ProtoBuf.ProtoMember(36, IsRequired = false, Name=@"fight_cap", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long fight_cap
+    {
+      get { return _fight_cap; }
+      set { _fight_cap = value; }
     }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)

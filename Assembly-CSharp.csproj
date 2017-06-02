@@ -19,7 +19,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_3_4;UNITY_5_3;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;PLATFORM_SUPPORTS_ADS_ID;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_4_2;UNITY_5_4;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EDITOR_RETINA;ENABLE_RETINA_GUISTYLES;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -38,101 +38,61 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\engine\Engine.cs" />
-     <Compile Include="Assets\engine\EngineMsgDef.cs" />
-     <Compile Include="Assets\engine\eventDef\DataEventArgs.cs" />
-     <Compile Include="Assets\engine\json\SSJsonTool.cs" />
-     <Compile Include="Assets\engine\json\SSTileMap.cs" />
-     <Compile Include="Assets\engine\json\SSTileMapInfo.cs" />
-     <Compile Include="Assets\engine\json\SSTileMapParser.cs" />
-     <Compile Include="Assets\engine\json\SSTileMapTileInfo.cs" />
-     <Compile Include="Assets\engine\json\SSTileMapTileSetInfo.cs" />
-     <Compile Include="Assets\engine\message\Message.cs" />
-     <Compile Include="Assets\engine\message\MessageManager.cs" />
-     <Compile Include="Assets\engine\net\SSSocket.cs" />
-     <Compile Include="Assets\engine\net\SocketBase.cs" />
-     <Compile Include="Assets\engine\other\SSDebug.cs" />
-     <Compile Include="Assets\proto\MItem.cs" />
-     <Compile Include="Assets\proto\MObj.cs" />
-     <Compile Include="Assets\proto\MceAuth.cs" />
-     <Compile Include="Assets\proto\MceEnterDungeon.cs" />
+     <Compile Include="Assets\proto\Auth.cs" />
+     <Compile Include="Assets\proto\Heartbeat.cs" />
      <Compile Include="Assets\proto\MceEnterGame.cs" />
-     <Compile Include="Assets\proto\MceEnterScene.cs" />
-     <Compile Include="Assets\proto\MceEquipAttrRandom.cs" />
-     <Compile Include="Assets\proto\MceEquipChange.cs" />
-     <Compile Include="Assets\proto\MceEquipEnhance.cs" />
-     <Compile Include="Assets\proto\MceEquipResolve.cs" />
-     <Compile Include="Assets\proto\MceEquipUpdateStar.cs" />
-     <Compile Include="Assets\proto\MceExecuteSkill.cs" />
-     <Compile Include="Assets\proto\MceExitDungeon.cs" />
-     <Compile Include="Assets\proto\MceHeartbeat.cs" />
-     <Compile Include="Assets\proto\MceMedalUpgrade.cs" />
-     <Compile Include="Assets\proto\MceMedalgemChange.cs" />
-     <Compile Include="Assets\proto\MceMedalgemCompose.cs" />
-     <Compile Include="Assets\proto\MceMove.cs" />
-     <Compile Include="Assets\proto\MceNpcTalk.cs" />
      <Compile Include="Assets\proto\MceShipInfo.cs" />
-     <Compile Include="Assets\proto\MceTaskReward.cs" />
-     <Compile Include="Assets\proto\MceUserInfo.cs" />
-     <Compile Include="Assets\proto\MseAirWall.cs" />
-     <Compile Include="Assets\proto\MseApplyBuffer.cs" />
-     <Compile Include="Assets\proto\MseAuth.cs" />
-     <Compile Include="Assets\proto\MseBag.cs" />
-     <Compile Include="Assets\proto\MseBagInfo.cs" />
-     <Compile Include="Assets\proto\MseDungeonSettle.cs" />
-     <Compile Include="Assets\proto\MseDungeonTaskInfo.cs" />
-     <Compile Include="Assets\proto\MseEnterDungeon.cs" />
-     <Compile Include="Assets\proto\MseEquipAttrRandom.cs" />
-     <Compile Include="Assets\proto\MseEquipChange.cs" />
-     <Compile Include="Assets\proto\MseEquipEnhance.cs" />
-     <Compile Include="Assets\proto\MseEquipList.cs" />
-     <Compile Include="Assets\proto\MseEquipResolve.cs" />
-     <Compile Include="Assets\proto\MseEquipUpdateStar.cs" />
-     <Compile Include="Assets\proto\MseErrorMsg.cs" />
-     <Compile Include="Assets\proto\MseExecuteSkill.cs" />
-     <Compile Include="Assets\proto\MseMedalList.cs" />
-     <Compile Include="Assets\proto\MseMedalUpgrade.cs" />
-     <Compile Include="Assets\proto\MseMedalgemChange.cs" />
-     <Compile Include="Assets\proto\MseMedalgemCompose.cs" />
-     <Compile Include="Assets\proto\MseMove.cs" />
-     <Compile Include="Assets\proto\MseObjDisappear.cs" />
-     <Compile Include="Assets\proto\MsePoint.cs" />
-     <Compile Include="Assets\proto\MseSceneObj.cs" />
      <Compile Include="Assets\proto\MseShipInfo.cs" />
-     <Compile Include="Assets\proto\MseShipList.cs" />
-     <Compile Include="Assets\proto\MseSkill.cs" />
-     <Compile Include="Assets\proto\MseTaskInfo.cs" />
-     <Compile Include="Assets\proto\MseTaskReward.cs" />
-     <Compile Include="Assets\proto\MseTransScene.cs" />
+     <Compile Include="Assets\proto\MseSyncVitality.cs" />
      <Compile Include="Assets\proto\MseUserInfo.cs" />
+     <Compile Include="Assets\proto\TransScene.cs" />
      <Compile Include="Assets\script\App.cs" />
      <Compile Include="Assets\script\AppDebug.cs" />
      <Compile Include="Assets\script\data\ADataManager.cs" />
      <Compile Include="Assets\script\data\UserDataManager.cs" />
+     <Compile Include="Assets\script\engine\Engine.cs" />
+     <Compile Include="Assets\script\engine\EngineMsgDef.cs" />
+     <Compile Include="Assets\script\engine\action\ActionManager.cs" />
+     <Compile Include="Assets\script\engine\action\BasicAction.cs" />
+     <Compile Include="Assets\script\engine\action\MoveToAction.cs" />
+     <Compile Include="Assets\script\engine\action\RotationToAction.cs" />
+     <Compile Include="Assets\script\engine\action\WaitAction.cs" />
+     <Compile Include="Assets\script\engine\eventDef\DataEventArgs.cs" />
+     <Compile Include="Assets\script\engine\message\Message.cs" />
+     <Compile Include="Assets\script\engine\message\MessageManager.cs" />
+     <Compile Include="Assets\script\engine\net\IProtobufToID.cs" />
+     <Compile Include="Assets\script\engine\net\ISocketBase.cs" />
+     <Compile Include="Assets\script\engine\net\ProtoEventArgs.cs" />
+     <Compile Include="Assets\script\engine\net\SSSocketManager.cs" />
+     <Compile Include="Assets\script\engine\net\SSSocketTool.cs" />
+     <Compile Include="Assets\script\engine\net\SocketBase.cs" />
+     <Compile Include="Assets\script\engine\other\SSDebug.cs" />
+     <Compile Include="Assets\script\engine\other\SSMath.cs" />
+     <Compile Include="Assets\script\engine\other\SSMonoBehaviour.cs" />
+     <Compile Include="Assets\script\engine\other\SSTimeRecord.cs" />
+     <Compile Include="Assets\script\engine\other\SSTool.cs" />
      <Compile Include="Assets\script\global\GlobalData.cs" />
-     <Compile Include="Assets\script\net\AppNetManager.cs" />
      <Compile Include="Assets\script\net\NetMsgDef.cs" />
-     <Compile Include="Assets\script\net\NetMsgProtoConfig.cs" />
-     <Compile Include="Assets\script\net\ProtoEventArgs.cs" />
+     <Compile Include="Assets\script\net\TestProtobufToID.cs" />
      <Compile Include="Assets\script\view\LoginView.cs" />
- <Reference Include="UnityEngine.Networking">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
  <Reference Include="LitJson">
- <HintPath>/Users/TerryLu/Documents/project/Susie/SusieEngine/SusieEngine/Assets/engine/plugin/LitJson.dll</HintPath>
+ <HintPath>/Users/TerryLu/Documents/project/Susie/SusieEngine/SusieEngine/Assets/script/engine/plugin/LitJson.dll</HintPath>
  </Reference>
  <Reference Include="protobuf-net">
- <HintPath>/Users/TerryLu/Documents/project/Susie/SusieEngine/SusieEngine/Assets/engine/plugin/protobuf-net.dll</HintPath>
+ <HintPath>/Users/TerryLu/Documents/project/Susie/SusieEngine/SusieEngine/Assets/script/engine/plugin/protobuf-net.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

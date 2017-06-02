@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from: src/MceShipInfo.proto
+// Generated from: proto/MceShipInfo.proto
 namespace AppProto
 {
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MceShipInfo")]
