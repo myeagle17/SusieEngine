@@ -15,17 +15,15 @@ namespace AppProto
   {
     public MceAuth() {}
     
-    private string _id = "";
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"id", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
+    private string _id;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"id", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public string id
     {
       get { return _id; }
       set { _id = value; }
     }
-    private string _pass = "";
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"pass", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
+    private string _pass;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"pass", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public string pass
     {
       get { return _pass; }
@@ -41,77 +39,26 @@ namespace AppProto
   {
     public MseAuth() {}
     
-    private string _uid = "";
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"uid", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
+    private string _uid;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"uid", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public string uid
     {
       get { return _uid; }
       set { _uid = value; }
     }
-    private bool _succ = default(bool);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"succ", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(default(bool))]
+    private bool _succ;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"succ", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public bool succ
     {
       get { return _succ; }
       set { _succ = value; }
     }
-    private bool _redirect = (bool)false;
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"redirect", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue((bool)false)]
-    public bool redirect
+    private long _serverTime;
+    [global::ProtoBuf.ProtoMember(3, IsRequired = true, Name=@"serverTime", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public long serverTime
     {
-      get { return _redirect; }
-      set { _redirect = value; }
-    }
-    private string _redirect_port = "";
-    [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"redirect_port", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
-    public string redirect_port
-    {
-      get { return _redirect_port; }
-      set { _redirect_port = value; }
-    }
-    private string _redirect_ip = "";
-    [global::ProtoBuf.ProtoMember(5, IsRequired = false, Name=@"redirect_ip", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
-    public string redirect_ip
-    {
-      get { return _redirect_ip; }
-      set { _redirect_ip = value; }
-    }
-    private string _redirect_pass = "";
-    [global::ProtoBuf.ProtoMember(6, IsRequired = false, Name=@"redirect_pass", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
-    public string redirect_pass
-    {
-      get { return _redirect_pass; }
-      set { _redirect_pass = value; }
-    }
-    private string _name = "";
-    [global::ProtoBuf.ProtoMember(7, IsRequired = false, Name=@"name", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
-    public string name
-    {
-      get { return _name; }
-      set { _name = value; }
-    }
-    private bool _bIsNew = default(bool);
-    [global::ProtoBuf.ProtoMember(8, IsRequired = false, Name=@"bIsNew", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(default(bool))]
-    public bool bIsNew
-    {
-      get { return _bIsNew; }
-      set { _bIsNew = value; }
-    }
-    private int _nCamp = default(int);
-    [global::ProtoBuf.ProtoMember(9, IsRequired = false, Name=@"nCamp", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
-    public int nCamp
-    {
-      get { return _nCamp; }
-      set { _nCamp = value; }
+      get { return _serverTime; }
+      set { _serverTime = value; }
     }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)

@@ -23,6 +23,7 @@ namespace Susie
 		}
 			
 		public void Add(string msgName ,System.Object obj ,  Message.DelegateMessage messageHandler){
+			debug ("add msg:"+msgName);
 			Message msg = null;
 			if (!m_dic.ContainsKey (msgName)) {
 				msg = new Message (msgName);
@@ -42,6 +43,7 @@ namespace Susie
 		}
 
 		public void SendMessage(string msgName , EventArgs e){
+			debug("sendMessage = " + msgName + ":" + e);
 			if (!m_dic.ContainsKey (msgName)) {
 				debug ("SendMessage error" + msgName);
 				return;
@@ -56,7 +58,7 @@ namespace Susie
 
 		private void debug(string s)
 		{
-			SSDebug.Log(s);
+			//SSDebug.Log(s);
 		}
 	}
 }

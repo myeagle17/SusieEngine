@@ -1,25 +1,43 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/net/AppNetManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/view/BattleView.cs">
     <Files>
-      <File FileName="Assets/script/net/AppNetManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/script/net/ProtoEventArgs.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/view/BattleView.cs" Line="43" Column="2" />
       <File FileName="Assets/script/engine/Engine.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/view/SceneObj/UserNode.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/engine/net/SocketBase.cs" Line="1" Column="1" />
+      <File FileName="Assets/proto/Auth.cs" Line="1" Column="1" />
       <File FileName="Assets/script/App.cs" Line="1" Column="1" />
-      <File FileName="Assets/proto/MceAuth.cs" Line="1" Column="1" />
       <File FileName="Assets/script/view/LoginView.cs" Line="1" Column="1" />
-      <File FileName="Assets/script/net/NetMsgDef.cs" Line="1" Column="1" />
-      <File FileName="Assets/script/net/NetMsgProtoConfig.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/net/NetProtoType.cs" Line="1" Column="1" />
       <File FileName="Assets/script/data/UserDataManager.cs" Line="1" Column="1" />
       <File FileName="Assets/script/data/ADataManager.cs" Line="1" Column="1" />
       <File FileName="Assets/script/AppDebug.cs" Line="1" Column="1" />
       <File FileName="Assets/script/engine/net/IProtobufToID.cs" Line="1" Column="1" />
       <File FileName="Assets/script/engine/net/ISocketBase.cs" Line="1" Column="1" />
       <File FileName="Assets/script/engine/net/ProtoEventArgs.cs" Line="1" Column="1" />
-      <File FileName="Assets/script/engine/net/SocketBase.cs" Line="1" Column="1" />
       <File FileName="Assets/script/engine/net/SSSocketManager.cs" Line="1" Column="1" />
       <File FileName="Assets/script/engine/net/SSSocketTool.cs" Line="1" Column="1" />
       <File FileName="Assets/script/engine/other/SSDebug.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/engine/EngineMsgDef.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/engine/other/SSMonoBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/engine/message/MessageManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/net/TestProtobufToID.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/global/GlobalData.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/model/UserModel.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/engine/message/Message.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/engine/other/SSTimeRecord.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/view/MsgDef.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/engine/eventDef/DataEventArgs.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/model/ModelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/proto/Control.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/global/GlobalServerTime.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/engine/action/WaitAction.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/engine/action/RotationToAction.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/engine/action/MoveToAction.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/engine/action/BasicAction.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/engine/action/ActionManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/view/KeyControl.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -28,6 +46,7 @@
       <Breakpoint file="/Users/TerryLu/Documents/project/Susie/SusieEngine/SusieEngine/Assets/script/net/AppNetManager.cs" line="172" column="1" />
       <Breakpoint file="/Users/TerryLu/Documents/project/Susie/SusieEngine/SusieEngine/Assets/script/net/AppNetManager.cs" line="164" column="1" />
       <Breakpoint file="/Users/TerryLu/Documents/project/Susie/SusieEngine/SusieEngine/Assets/script/net/AppNetManager.cs" line="80" column="1" />
+      <Breakpoint file="/Users/TerryLu/Documents/project/Susie/SusieEngine/SusieEngine/Assets/script/engine/message/MessageManager.cs" line="47" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

@@ -55,8 +55,12 @@ namespace Susie
 
 		public void Update ()
 		{
-			if (m_isDelete)
+			if (m_isDelete){
+				DoFinish();
+				DoFinishDelegate();
 				return;
+			}
+
 			if (m_curTime >= m_interval) {
 				m_curTime = m_interval;
 				m_isDelete = true;

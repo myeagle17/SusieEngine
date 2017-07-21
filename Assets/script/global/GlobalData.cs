@@ -9,16 +9,15 @@ class GlobalData{
         if(isInit)return;
 
         UserDataMgr = new UserDataManager();
-        
+     
         isInit = true;
     }
     
     public static void Clear(){
         if(!isInit)return;
-        
+
         UserDataMgr.clear();
         UserDataMgr = null;
-        
         isInit = false;
     }
    

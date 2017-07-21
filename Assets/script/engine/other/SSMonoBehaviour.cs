@@ -70,7 +70,7 @@ public class SSMonoBehaviour : MonoBehaviour
 		m_collisionMap.Add (tag, delegateCollision);
 	}
 
-	private void RemoveAllMessage ()
+	protected void RemoveAllMessage ()
 	{
 		foreach (var item in m_msgDataList) {
 			MessageManager.GetIncestance ().Remove (item, this.gameObject);

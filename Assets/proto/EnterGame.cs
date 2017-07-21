@@ -7,13 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from: proto/MceEnterGame.proto
+// Generated from: proto/EnterGame.proto
 namespace AppProto
 {
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MceEnterGame")]
   public partial class MceEnterGame : global::ProtoBuf.IExtensible
   {
     public MceEnterGame() {}
+    
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MseEnterGame")]
+  public partial class MseEnterGame : global::ProtoBuf.IExtensible
+  {
+    public MseEnterGame() {}
     
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)

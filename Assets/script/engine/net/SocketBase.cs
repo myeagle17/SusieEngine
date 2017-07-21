@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using System.IO;
+using UnityEngine;
 
 namespace Susie
 {
@@ -11,53 +12,50 @@ namespace Susie
 	{
 
 		private Socket socket;
-
+		private bool isRun;
 		//连接，关闭连接，查询连接状态，接收数据，发送数据，错误代码返回
 		public SocketBase(int waitTime) : base(waitTime)
 		{
 			Condition = SocketBaseCondition.Unconnected;
 			receiveMsg = new MemoryStream();
 			sendMsg = new MemoryStream();
-			socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+			isRun = false;
 		}
 
 		public override void Connect()
 		{
+			TestDebug("Connect");
 			// check condition
 			if (IsConnected())
 			{
-				Debug("Connect error:socket is connected");
+				TestDebug("Connect error:socket is connected");
 				return;
 			}
 
-			//异步连接,连接成功调用connectCallback方法  
-			IAsyncResult result = socket.BeginConnect(IPInfo, new AsyncCallback(ConnectCallback), socket);
-		}
+			//异步连接,连接成功调用connectCallback方法 
+			socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+			Condition = SocketBaseCondition.Connected;
+			try {
+				socket.Connect (ipInfo);
+			} catch (Exception ex) {
+				Condition = SocketBaseCondition.Unconnected;
+				TestDebug("connect Time out");
+			}
 
-		private void ConnectCallback(IAsyncResult asyncConnect)
-		{
-			if (socket.Connected)
-			{
+			if (IsConnected ()) {
 				socket.ReceiveTimeout = receiveTimeout;
-				//与socket建立连接成功，开启线程接受服务端数据。  
-				Condition = SocketBaseCondition.Connected;
-				Thread thread = new Thread(new ThreadStart(Run));
+				isRun = true;
+				Thread thread = new Thread (new ThreadStart (Run));
 				thread.IsBackground = true;
-				thread.Start();
-			}
-			else
-			{
-				Close();
-				Debug("connect Time out");
+				thread.Start ();
 			}
 		}
-
+			
 		public override void Close()
 		{
-			Debug("Close");
+			TestDebug ("Close");
 			if (!IsConnected())
 			{
-				Debug("Close error:socket is unconnected");
 				return;
 			}
 			Condition = SocketBaseCondition.Unconnected;
@@ -65,13 +63,22 @@ namespace Susie
 			sendMsg = new MemoryStream();
 			socket.Shutdown(SocketShutdown.Both);
 			socket.Close();
+			socket = null;
+			isRun = false;
 		}
 
 		public override void Send(byte[] msg)
 		{
-			lock (sendMsg)
-			{
-				sendMsg.Write(msg, 0, msg.Length);
+			socket.BeginSend (msg,0,msg.Length ,SocketFlags.None , new AsyncCallback(SendCallback), socket );
+		}
+
+		private void SendCallback(IAsyncResult asyncConnect)
+		{
+			try {
+				socket.EndSend(asyncConnect);
+			} catch (Exception ex) {
+				Debug.LogError ("Socket send error:"+ ex);
+				Close ();
 			}
 		}
 
@@ -82,56 +89,23 @@ namespace Susie
 
 		private void Run()
 		{
-			while (true)
+			while (isRun)
 			{
 
 				if (!IsConnected())
 				{
 					break;
 				}
-
-				// send
-				lock (sendMsg)
-				{
-					if (sendMsg.Length > 0)
-					{
-						Debug("send:" + sendMsg.ToString());
-						SendToServer(sendMsg.ToArray());
-						sendMsg = new MemoryStream();
-					}
-				}
-
+					
 				ReceiveFromServer();
 			}
 		}
-
-
-		private void SendToServer(byte[] msg)
-		{
-			Debug("sendToServer");
-			if (!IsConnected())
-			{
-				Debug("Send error:socket is unconnected");
-				return;
-			}
-
-			try
-			{
-				socket.Send(msg);
-			}
-			catch (Exception e)
-			{
-				Debug("send message error");
-				Debug(e.ToString());
-				Close();
-			}
-		}
-
+			
 		private void ReceiveFromServer()
 		{
 			if (!IsConnected())
 			{
-				Debug("Receive error:socket is unconnected");
+				TestDebug("Receive error:socket is unconnected");
 				return;
 			}
 			try
@@ -152,15 +126,15 @@ namespace Susie
 			}
 			catch (Exception e)
 			{
-				Debug("Failed to clientSocket error." + e);
+				TestDebug("Failed to clientSocket error." + e);
 				Close();
 			}
 		}
 
 
-		private void Debug(string s)
+		private void TestDebug(string s)
 		{
-			SSDebug.Log(s);
+			//SSDebug.Log(s);
 		}
 	}
 }

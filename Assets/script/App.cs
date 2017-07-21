@@ -10,15 +10,17 @@ public class App : MonoBehaviour {
 	{
 		Engine.Init ();
 		GlobalData.Init();
+		ModelManager.Init();
 		
 	}
 	// Use this for initialization
 	void Start () {
-		
+		 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		SSSocketManager.getInstance().UpdateReceive();
+		
 	}
+
 }
